@@ -44,16 +44,40 @@ After installation, a new backend module will be available:
 The extension provides frontend controllers that you can use in your templates:
 
 ```html
-<f:render section="chemicalStructure" arguments="{structure: 'CH4'}" />
+Give in the form the position, the number of functional groups and it returns the right 
+alkane name:
+functional group: methyl
+number (count): 2
+position: 1,2
+returns 1,2-dimethyl
 ```
 
 ### Programmatic Usage
 
 ```php
-use AyhanKoyun\IupacNomenclature\Service\ChemicalStructureService;
+    public function __construct(
+        $chainLength,
+        $substituents = [],
+        $isCyclo = false,
+        $isAlcohol = false,
+        $alcoholData = []
+    ) {
+        $this->chainLength = $chainLength;
+        $this->substituents = $substituents;
+        $this->isCyclo = $isCyclo;
+        $this->isAlcohol = $isAlcohol;
+        $this->alcoholData = $alcoholData;
+    }
 
-$service = GeneralUtility::makeInstance(ChemicalStructureService::class);
-$iupacName = $service->generateIUPACName('CH4'); // Returns "methane"
+    /**
+     * Returns the (simple) IUPAC name of a (non-cyclic) alkane.
+     */
+    public function getName()
+
+    /** 
+     * This script returns the correct IUPAC-Name not stereo structure 
+    */
+    
 ```
 
 ## System Requirements
@@ -78,7 +102,6 @@ Classes/
     ├── Alkane.php
     ├── ChemicalStructureService.php
     ├── Compound.php
-    └── IUPACNameBuilder.php
 ```
 
 ### Running Tests
