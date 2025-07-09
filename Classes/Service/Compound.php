@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 namespace AyhanKoyun\IupacNomenclature\Service;
@@ -23,25 +22,3 @@ abstract class Compound {
         return ucfirst(strtolower($name));
     }
 }
-
-=======
-<?php
-
-namespace AyhanKoyun\IupacNomenclature\Service;
-abstract class Compound {
-    protected $chainLength;
-    protected $substituents = [];
-
-    public function __construct($chainLength, $substituents) {
-        $this->chainLength = $chainLength;
-        $this->substituents = $substituents;
-    }
-
-    abstract public function getName();
-
-    protected function formatName($name) {
-        return ucfirst(strtolower($name));
-    }
-}
-
->>>>>>> 0b9d07b48938ab5ee9a4bd675d164dc503c35af5

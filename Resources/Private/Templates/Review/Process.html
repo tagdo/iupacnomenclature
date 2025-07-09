@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <f:layout name="Default" />
 <f:section name="Main">
 
@@ -11,54 +10,3 @@
     <a href="{f:uri.action(action: 'list')}">Zurück zum Formular</a>
 
 </f:section>
-=======
-<f:layout name="Default" />
-<f:section name="Main">
-
-    <h1>Ergebnis</h1>
-
-    <f:if condition="{structure.iupac}">
-        <p><strong>IUPAC-Name:</strong> {structure.iupac}</p>
-    </f:if>
-
-    <f:debug>{structure}</f:debug>
-
-    <a href="{f:uri.action(action: 'list')}">Zurück zum Formular</a>
-
-</f:section>
-  <script>
-    function convertGermanIUPAC(name) {
-      return name
-        .replace(/\bIod\b/gi, "iodo")
-        .replace(/\bChlor\b/gi, "chloro")
-        .replace(/\bFluor\b/gi, "fluoro")
-        .replace(/\bBr\b/gi, "bromo")
-        .replace(/\bHexan\b/gi, "hexane")
-        .replace(/\bHeptan\b/gi, "heptane")
-        .replace(/\bOctan\b/gi, "octane")
-        .replace(/\bNonan\b/gi, "nonane")
-        .replace(/\bDecan\b/gi, "decane")
-        .replace(/\bUndecan\b/gi, "undecane")
-        .replace(/\bDodecan\b/gi, "dodecane");
-    }
-
-    async function convertName() {
-      const input = document.getElementById('iupacInput').value.trim();
-      if (!input) return alert("Bitte gib einen Namen ein.");
-
-      const englishName = convertGermanIUPAC(input);
-      const canvas = new ChemDoodle.StructureCanvas('canvas', 400, 300);
-
-      try {
-        const response = await fetch(`https://opsin.ch.cam.ac.uk/opsin/${encodeURIComponent(englishName)}.smi`);
-        if (!response.ok) throw new Error("OPSIN konnte den Namen nicht umwandeln.");
-        const smiles = await response.text();
-        const mol = ChemDoodle.readSMILES(smiles.trim());
-        canvas.loadMolecule(mol);
-      } catch (err) {
-        alert("Fehler bei der Umwandlung. Der Name ist eventuell nicht gültig.");
-        console.error(err);
-      }
-    }
-  </script>
->>>>>>> 0b9d07b48938ab5ee9a4bd675d164dc503c35af5

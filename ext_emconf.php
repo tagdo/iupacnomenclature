@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 $EM_CONF['iupacnomenclature'] = [
@@ -18,24 +17,3 @@ $EM_CONF['iupacnomenclature'] = [
         'suggests' => [],
     ],
 ];
-=======
-<?php
-
-$EM_CONF['iupacnomenclature'] = [
-    'title' => 'Iupac Nomenclature',
-    'description' => 'An extension to find the right IUPAC nomenclature for a given chemical structure.',
-    'category' => 'frontend',
-    'author' => 'Ayhan Koyun',
-    'author_email' => 'ayhankoyun@hotmail.de',
-    'state' => 'stable',
-    'version' => '1.0.0',
-    'constraints' => [
-        'depends' => [
-            'typo3' => '12.0.0-12.99.99',
-            'php' => '8.0.0-8.99.99',
-        ],
-        'conflicts' => [],
-        'suggests' => [],
-    ],
-];
->>>>>>> 0b9d07b48938ab5ee9a4bd675d164dc503c35af5
