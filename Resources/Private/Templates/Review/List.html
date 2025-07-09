@@ -1,0 +1,47 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <h1>Single View for ChemicalCompound</h1>
+
+    <f:form action="process" method="post" name="chemicalCompoundForm">
+
+        <input type="number" name="chainLength" placeholder="Type in chain length" required="required" />
+
+        <div id="substituents">
+            <div class="substituent">
+                <input type="text" name="substituents[0][name]" placeholder="Name of substituent" />
+                <input type="text" name="substituents[0][positions]" placeholder="Positions (e.g. 2,3,5)" />
+                <input type="number" name="substituents[0][count]" placeholder="Count" />
+            </div>
+        </div>
+
+        <button type="button" id="addSubstituentButton">
+            <f:translate key="button.addSubstituent" extensionName="Iupacnomenclature" />
+        </button>
+        <button type="button" id="addBranchButton">
+            <f:translate key="button.addBranch" extensionName="Iupacnomenclature" />
+        </button>
+        <button type="button" id="addHalogenButton">
+            <f:translate key="button.addHalogen" extensionName="Iupacnomenclature" />
+        </button>
+        <button type="button" id="addAlcoholButton">
+            <f:translate key="button.addAlcohol" extensionName="Iupacnomenclature" />
+        </button>
+
+        <button type="button" id="addCycloButton">
+            <f:translate key="button.addCyclo" extensionName="Iupacnomenclature" />
+        </button>
+
+        <input type="submit"
+            value="{f:translate(key: 'button.send', extensionName: 'Iupacnomenclature', default: 'Send')}" />
+
+    </f:form>
+
+    <f:if condition="{structure}">
+        <h2><f:translate key="label.result" extensionName="Iupacnomenclature" /></h2>
+    </f:if>
+
+</f:section>
+
+</html>
