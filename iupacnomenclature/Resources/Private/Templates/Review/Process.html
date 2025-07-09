@@ -1,0 +1,12 @@
+<f:layout name="Default" />
+<f:section name="Main">
+
+    <h1>Ergebnis</h1>
+
+    <f:if condition="{structure.iupac}">
+        <p><strong>IUPAC-Name:</strong> {structure.iupac}</p>
+    </f:if>
+
+    <a href="{f:uri.action(action: 'list')}">Zurück zum Formular</a>
+
+</f:section>

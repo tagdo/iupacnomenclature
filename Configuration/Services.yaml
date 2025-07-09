@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Configuration/Services.yaml
 services:
   _defaults:
@@ -15,4 +16,23 @@ services:
 
   AyhanKoyun\IupacNomenclature\Controller\:
     resource: '../Classes/Controller/*'
+=======
+# Configuration/Services.yaml
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  # DIESER EINTRAG MUSS RAUS, ER VERURSACHT DEN FEHLER!
+  # AyhanKoyun\IupacNomenclature\:
+  #   resource: '../Classes/*'
+
+  AyhanKoyun\IupacNomenclature\Service\:
+    resource: '../Classes/Service/*'
+    tags: ['app.service']
+
+  AyhanKoyun\IupacNomenclature\Controller\:
+    resource: '../Classes/Controller/*'
+>>>>>>> 0b9d07b48938ab5ee9a4bd675d164dc503c35af5
     tags: ['controller.service_arguments']
