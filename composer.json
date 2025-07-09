@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
     "name": "ayhan-koyun/iupacnomenclature",
     "type": "typo3-cms-extension",
@@ -31,36 +30,4 @@
             "AyhanKoyun\\IupacNomenclature\\Tests\\": "Tests/"
         }
     }
-=======
-{
-    "name": "ayhan-koyun/iupacnomenclature",
-    "type": "typo3-cms-extension",
-    "description": "An extension to find the right IUPAC nomenclature for a given chemical structure.",
-    "require": {
-        "typo3/cms-core": "^12.0",
-        "psr/log": "^1.1 || ^2.0 || ^3.0"
-    },
-    "authors": [
-        {
-            "name": "Ayhan Koyun",
-            "email": "ayhankoyun@hotmail.de"
-        }
-    ],
-    "minimum-stability": "dev",
-    "autoload": {
-        "psr-4": {
-            "AyhanKoyun\\IupacNomenclature\\": "Classes/"
-        }
-    },
-    "extra": {
-        "typo3/cms": {
-            "extension-key": "iupacnomenclature"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "AyhanKoyun\\IupacNomenclature\\Tests\\": "Tests/"
-        }
-    }
->>>>>>> 0b9d07b48938ab5ee9a4bd675d164dc503c35af5
 }
