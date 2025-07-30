@@ -1,0 +1,25 @@
+# Sphinx build artifacts
+_build/
+.doctrees/
+*.pyc
+*.pyo
+
+# Generated documentation
+html/
+latex/
+
+# Font files (generated)
+*.woff
+*.woff2
+*.ttf
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VS Code settings
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp 

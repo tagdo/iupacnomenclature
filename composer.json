@@ -2,6 +2,7 @@
     "name": "ayhan-koyun/iupacnomenclature",
     "type": "typo3-cms-extension",
     "description": "An extension to find the right IUPAC nomenclature for a given chemical structure.",
+    "version": "1.1.0",
     "license": "MIT",
     "require": {
         "typo3/cms-core": "^12.0",

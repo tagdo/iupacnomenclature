@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function createRemoveButton(parentDiv) {
         const btn = document.createElement('button');
         btn.type = 'button';
-        btn.textContent = 'Entfernen';
+        btn.textContent = 'Remove';
         btn.style.marginLeft = '10px';
         btn.style.backgroundColor = '#d9534f';
         btn.style.color = 'white';
@@ -37,11 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const div = document.createElement('div');
         div.className = 'substituent';
         div.innerHTML = `
-            <input type="text" name="branchSubstituents[${substituentIndex}][branchName]" placeholder="Name des Substituenten der verzweigten Kette">
-            <input type="text" name="branchSubstituents[${substituentIndex}][branchPositions]" placeholder="Position des Substituenten">
-            <input type="number" name="branchSubstituents[${substituentIndex}][branchCount]" placeholder="Anzahl der Substituenten">
-            <input type="number" name="branchSubstituents[${substituentIndex}][branchLength]" placeholder="Länge der Kette">
-            <input type="number" name="branchSubstituents[${substituentIndex}][branchChainPosition]" placeholder="Position der verzweigten Kette">
+            <input type="text" name="branchSubstituents[${substituentIndex}][branchName]" placeholder="Name of the substituent of the branched chain">
+            <input type="text" name="branchSubstituents[${substituentIndex}][branchPositions]" placeholder="Positionof thes Substituent">
+            <input type="number" name="branchSubstituents[${substituentIndex}][branchCount]" placeholder="Number of substituents">
+            <input type="number" name="branchSubstituents[${substituentIndex}][branchLength]" placeholder="Length of the chain">
+            <input type="number" name="branchSubstituents[${substituentIndex}][branchChainPosition]" placeholder="Position of the branched chain">
         `;
         div.appendChild(createRemoveButton(div));
         substituentsContainer.appendChild(div);
@@ -53,9 +53,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const div = document.createElement('div');
         div.className = 'halogen-field';
         div.innerHTML = `
-            <input type="text" name="halogens[${substituentIndex}][halogen]" placeholder="Halogen (z.B. F, Cl, Br)">
-            <input type="text" name="halogens[${substituentIndex}][halogenPositions]" placeholder="Positionen">
-            <input type="number" name="halogens[${substituentIndex}][halogenCount]" placeholder="Anzahl">
+            <input type="text" name="halogens[${substituentIndex}][halogen]" placeholder="Halogen (e.g. F, Cl, Br)">
+            <input type="text" name="halogens[${substituentIndex}][halogenPositions]" placeholder="Positions">
+            <input type="number" name="halogens[${substituentIndex}][halogenCount]" placeholder="Number">
         `;
         div.appendChild(createRemoveButton(div));
         substituentsContainer.appendChild(div);
@@ -67,9 +67,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const div = document.createElement('div');
         div.className = 'alcohol-field';
         div.innerHTML = `
-            <label><input type="checkbox" name="isAlcohol" value="1">Enthält OH-Gruppe?</label>
-            <input type="text" name="alcohols[${substituentIndex}][alcoholPositions]" placeholder="Position(en) (z.B. 2 oder 2,3)">
-            <input type="number" name="alcohols[${substituentIndex}][alcoholCount]" placeholder="Anzahl">
+            <label><input type="checkbox" name="isAlcohol" value="1">Contains OH group?</label>
+            <input type="text" name="alcohols[${substituentIndex}][alcoholPositions]" placeholder="Position(s) (e.g. 2 or 2,3)">
+            <input type="number" name="alcohols[${substituentIndex}][alcoholCount]" placeholder="Number">
         `;
         div.appendChild(createRemoveButton(div));
         substituentsContainer.appendChild(div);
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
         div.innerHTML = `
             <label>
                 <input type="checkbox" name="isCyclo" value="1">
-                Ist cyclisch?
+                Is cyclic?
             </label>
         `;
         substituentsContainer.appendChild(div);
